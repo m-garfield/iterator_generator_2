@@ -1,12 +1,8 @@
 import types
-
-
 def flat_generator(list_of_lists):
-    ...
-    yield
-    ...
-
-
+    for list_of_list_element in list_of_lists:
+        for item in list_of_list_element:
+            yield item
 def test_2():
     list_of_lists_1 = [
         ['a', 'b', 'c'],
